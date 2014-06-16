@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+    
+        <Button
+        	android:id="@+id/turnOn"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_alignTop="@+id/linearLayout1"
+        	android:layout_alignParentLeft="true"
+        	android:text="@string/on" />
+
+    	<Button
+        	android:id="@+id/turnOff"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_alignTop="@+id/linearLayout1"
+        	android:layout_marginRight="14dp"
+        	android:layout_toRightOf="@+id/turnOn"
+        	android:text="@string/off" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/turnOn"
+        android:text="@string/Find" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/pairedDevices"
+        android:layout_centerHorizontal="true"
+        android:layout_height="200dp"
+        android:layout_marginLeft="25dp" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/pairedDevices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search"
+        android:layout_marginLeft="25dp"
+        android:text="@string/paired"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
